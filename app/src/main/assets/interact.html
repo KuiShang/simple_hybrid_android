@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" dir="ltr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <script type="text/javascript">
+        function showToast(toast) {
+            javascript: control.showToast(toast);
+        }
+
+        function log(msg) {
+            console.log(msg);
+        }
+
+    </script>
+
+</head>
+
+<body>
+<div class="app">
+    <input type="button" value="toast" onClick="showToast('Hello world')" />
+
+    <div class="item-container">
+
+    </div>
+</div>
+</body>
+<style>
+.app {
+    width: 100vw;
+}
+.item {
+    height: 10vh;
+    background-color: royalblue;
+    margin-bottom: 20px;
+}
+</style>
+
+<script>
+    let container = document.querySelector('.item-container')
+    for(let i = 0; i<40; i++) {
+        let item = document.createElement('DIV')
+        item.className = `item item${i}`
+        container.appendChild(item)
+    }
+</script>
+</html>
